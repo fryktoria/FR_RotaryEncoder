@@ -27,7 +27,7 @@ The code supports:
 
    * Operation via interrupts or polling
    * Debouncing of the rotary encoder rotational movement with a method that 
-      does not utilize debouncing time, base on the work of David Johnson-Davies
+      does not utilize debouncing time, based on the work of David Johnson-Davies
    * Reading of the switch state and identification of Long Press
    * Setting of rotational sensitivity
 
@@ -65,7 +65,7 @@ The code supports:
 2. Check the wiring of the rotary encoder. By default, the Arduino inputs are
      configured **without** pull-ups. If the module has pull-up resistors 
      in pins A and B, you do not have to do anything. But if there are no pull-ups,
-     you have to activate them yourself:
+     you have to set the manually using the internal MCU pull-ups:
 
       ```c++
       rencoder.enableInternalRotaryPullups(); 
@@ -78,12 +78,12 @@ The code supports:
       rencoder.enableInternalSwitchPullup(); 
       ```
 
-3. With pull-up resistors and a switch connecting to GND, the steady state is 1 and the 
-     active is 0. If your hardware has a switch from pin to Vcc and a pull down resistor,
+3. With pull-up resistors and a switch connecting to GND, the steady state (switch not pressed)
+     is 1 and the active (switch pressed) is 0. If your hardware has a switch from pin to Vcc 
+     and a pull down resistor,
      you can invert the logic with:
 
       ```c++
-      rencoder.setRotaryLogic(true);
       rencoder.setSwitchLogic(true);
       ```
 
@@ -93,7 +93,7 @@ You may also use `rencoder.setRotaryLogic()` to invert the rotational direction.
      as the wrap-around mode, with:
 
       ```c++
-      rencoder.setRotaryLimits(rotaryMaximum, rotaryMinimum, rotaryWrapMode);
+      rencoder.setRotaryLimits(rotaryMinimum, rotaryMaximum, rotaryWrapMode);
       ```
 
     The **rotaryWrap** mode seems simple to understand but is a bit tricky.
