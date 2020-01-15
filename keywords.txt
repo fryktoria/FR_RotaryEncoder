@@ -1,0 +1,58 @@
+###########################################
+# Syntax Coloring Map for TimedDigitalIO
+###########################################
+
+###########################################
+# Datatypes e.g. Classes (KEYWORD1)
+###########################################
+
+RotaryEncoder		KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+RotaryEncoder	KEYWORD2
+setRotaryLogic	KEYWORD2
+enableInternalRotaryPullups	KEYWORD2
+getDirection	KEYWORD2
+getPosition		KEYWORD2
+setPosition		KEYWORD2
+setMaxValue		KEYWORD2
+setMinValue		KEYWORD2
+setWrapMode		KEYWORD2
+getSwitchState	KEYWORD2
+setSwitchDebounceDelay	KEYWORD2
+setSwitchLogic	KEYWORD2
+enableInternalSwitchPullup	KEYWORD2
+setLongPressTime	KEYWORD2
+update			KEYWORD2
+rotaryUpdate	KEYWORD2
+switchUpdate	KEYWORD2
+setSensitive	KEYWORD2
+setRotationalStep	KEYWORD2
+setRotaryLimits	KEYWORD2
+
+rotaryLogic	KEYWORD2   
+minValue	KEYWORD2
+maxValue	KEYWORD2
+wrapMode	KEYWORD2
+sensitive	KEYWORD2
+rotationalStep	KEYWORD2
+keyPressedTime	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+###########################################
+# Constants (LITERAL1)
+###########################################
+
+CCW	LITERAL1 
+CW	LITERAL1
+NOT_MOVED LITERAL1
+SW_OFF	LITERAL1
+SW_ON	LITERAL1
+SW_LONG	LITERAL1
+
